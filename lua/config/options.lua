@@ -14,3 +14,4 @@ vim.opt.smarttab = true
 
 vim.opt.hlsearch = false
 vim.opt.clipboard = "unnamedplus"
+vim.opt.undofile = true
