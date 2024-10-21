@@ -2,8 +2,6 @@ require("config.lazy")
 require("config.options")
 require("config.autocmd")
 
-require("cmp").setup()
-
 require("mason").setup()
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -45,3 +43,79 @@ require("noice").setup({
     lsp_doc_border = true, -- add a border to hover docs and signature help
   },
 })
+
+require('lualine').setup {
+  options = {
+    icons_enabled = true,
+    theme = 'auto',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    disabled_filetypes = {
+      statusline = {},
+      winbar = {},
+    },
+    ignore_focus = {},
+    always_divide_middle = true,
+    globalstatus = false,
+    refresh = {
+      statusline = 1000,
+      tabline = 1000,
+      winbar = 1000,
+    }
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  winbar = {},
+  inactive_winbar = {},
+  extensions = {}
+}
+
+require("astrotheme").setup({
+  palette = "astrodark", -- String of the default palette to use when calling `:colorscheme astrotheme`
+  background = { -- :h background, palettes to use when using the core vim background colors
+    light = "astrolight",
+    dark = "astrodark",
+  },
+
+  style = {
+    transparent = true,         -- Bool value, toggles transparency.
+    inactive = true,             -- Bool value, toggles inactive window color.
+    float = true,                -- Bool value, toggles floating windows background colors.
+    neotree = true,              -- Bool value, toggles neo-trees background color.
+    border = true,               -- Bool value, toggles borders.
+    title_invert = true,         -- Bool value, swaps text and background colors.
+    italic_comments = true,      -- Bool value, toggles italic comments.
+    simple_syntax_colors = false, -- Bool value, simplifies the amounts of colors used for syntax highlighting.
+  },
+
+
+  termguicolors = true, -- Bool value, toggles if termguicolors are set by AstroTheme.
+
+  terminal_color = true, -- Bool value, toggles if terminal_colors are set by AstroTheme.
+
+  plugin_default = "auto", -- Sets how all plugins will be loaded
+                           -- "auto": Uses lazy / packer enabled plugins to load highlights.
+                           -- true: Enables all plugins highlights.
+                           -- false: Disables all plugins.
+
+  plugins = {              -- Allows for individual plugin overrides using plugin name and value from above.
+    ["bufferline.nvim"] = true,
+  },
+
+})
+vim.cmd.colorscheme("astrodark")
