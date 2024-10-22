@@ -6,6 +6,8 @@ require("config.autocmd")
 -- Furthermore, even if not possible they should not appear in the init.lua
 require("mason").setup()
 
+require("nvim-web-devicons").setup();
+
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require("mason-lspconfig").setup()
 require("mason-lspconfig").setup_handlers {
@@ -23,6 +25,9 @@ require("mason-lspconfig").setup_handlers {
     --     require("rust-tools").setup {}
     -- end
 }
+
+vim.opt.termguicolors = true
+require("bufferline").setup{}
 
 require("noice").setup({
   lsp = {
