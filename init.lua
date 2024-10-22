@@ -2,6 +2,8 @@ require("config.lazy")
 require("config.options")
 require("config.autocmd")
 
+-- FIXME: Require setups should be replaced by using the opts field when possible
+-- Furthermore, even if not possible they should not appear in the init.lua
 require("mason").setup()
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -36,11 +38,21 @@ require("noice").setup({
   },
   -- you can enable a preset for easier configuration
   presets = {
-    bottom_search = true, -- use a classic bottom cmdline for search
-    command_palette = false, -- position the cmdline and popupmenu together
-    long_message_to_split = true, -- long messages will be sent to a split
-    inc_rename = false, -- enables an input dialog for inc-rename.nvim
-    lsp_doc_border = true, -- add a border to hover docs and signature help
+      bottom_search = true, -- use a classic bottom cmdline for search
+      command_palette = false, -- position the cmdline and popupmenu together
+      long_message_to_split = true, -- long messages will be sent to a split
+      inc_rename = false, -- enables an input dialog for inc-rename.nvim
+      lsp_doc_border = true, -- add a border to hover docs and signature help
+  },
+  routes = {
+      {
+          filter = {
+              event = "msg_show",
+              kind = "",
+              find = "written",
+          },
+          opts = { skip = true },
+      },
   },
 })
 
@@ -93,7 +105,7 @@ require("astrotheme").setup({
   },
 
   style = {
-    transparent = true,         -- Bool value, toggles transparency.
+    transparent = false,         -- Bool value, toggles transparency.
     inactive = true,             -- Bool value, toggles inactive window color.
     float = true,                -- Bool value, toggles floating windows background colors.
     neotree = true,              -- Bool value, toggles neo-trees background color.
