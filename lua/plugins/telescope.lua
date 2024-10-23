@@ -12,7 +12,9 @@ return {
               { "<leader>ff", builtin.find_files, desc = "files" },
               { "<leader>fw", builtin.live_grep, desc = "grep" },
               { "<leader>fb", builtin.buffers, desc = "buffers" },
+              { "<leader>fg", builtin.git_files, desc = "files tracked by git" },
               { "<leader>lD", builtin.diagnostics, desc = "diagnostics" },
+              { "<leader>lR", builtin.lsp_references, desc = "symbol references" },
           }
       end,
       cmd = "Telescope",
