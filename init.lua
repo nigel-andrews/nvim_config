@@ -2,6 +2,8 @@ require("config.lazy")
 require("config.options")
 require("config.autocmd")
 
+require("config.mappings")
+
 -- FIXME: Require setups should be replaced by using the opts field when possible
 -- Furthermore, even if not possible they should not appear in the init.lua
 require("mason").setup()
