@@ -63,6 +63,25 @@ require("noice").setup({
   },
 })
 
+require('guess-indent').setup{
+  auto_cmd = true,
+  on_tab_options = {
+    ["expandtab"] = false,
+  },
+  on_space_options = {
+    ["expandtab"] = true,
+    ["tabstop"] = 8,
+    ["softtabstop"] = "detected",
+    ["shiftwidth"] = "detected",
+  },
+  buftype_exclude = {
+    "help",
+    "nofile",
+    "terminal",
+    "prompt",
+  },
+}
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -137,4 +156,5 @@ require("astrotheme").setup({
   },
 
 })
+
 vim.cmd.colorscheme("astrodark")
