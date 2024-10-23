@@ -4,6 +4,7 @@ return {
         -- FIXME: vertical size is too short
         float_opts = {
             border = 'curved'
-        }
+        },
+        shell = "/bin/zsh",
     },
 }
