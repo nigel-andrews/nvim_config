@@ -2,7 +2,8 @@ local map = vim.keymap.set
 
 -- Misc
 map('v', '<leader>/', 'gc', { desc = "Comment selection", remap = true });
-map('n', '<leader>c', '<cmd>bdelete<cr>', { desc = "Close current buffer"} );
+map('n', '<leader>c', '<cmd>bdelete<cr>', { desc = "Close current buffer" });
+map('n', '<leader>e', '<cmd>e %:h<cr>', { desc = "Open oil in current directory" });
 
 -- Buffer related
 map('n', '<PageUp>', '<cmd>bprevious<cr>');
