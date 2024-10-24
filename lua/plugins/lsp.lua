@@ -36,7 +36,10 @@ return
     config = function()
         require("plugins.lsp_helpers.ui").setup()
 
-        vim.diagnostic.config({ severity_sort = true })
+        vim.diagnostic.config({
+            severity_sort = true,
+            update_in_insert = true,
+        })
 
         local function on_attach(client, bufnr)
             require("plugins.lsp_helpers.ui").on_attach(client, bufnr)
