@@ -20,7 +20,7 @@ vim.opt.undofile = true
 
 vim.filetype.add({
     extension = {
-        h = "c",
+        h = "cpp",
     },
 })
 
