@@ -4,6 +4,7 @@ local map = vim.keymap.set
 map('v', '<leader>/', 'gc', { desc = "Comment selection", remap = true });
 map('n', '<leader>c', '<cmd>bdelete<cr>', { desc = "Close current buffer" });
 map('n', '<leader>e', '<cmd>e %:h<cr>', { desc = "Open oil in current directory" });
+map('n', '<leader>ft', '<cmd>TodoTelescope<cr>', { desc = "Find all Todos" });
 
 -- Buffer related
 map('n', '<PageUp>', '<cmd>bprevious<cr>');
