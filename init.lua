@@ -157,4 +157,6 @@ require("astrotheme").setup({
 
 })
 
+require("gitsigns").setup()
+
 vim.cmd.colorscheme("astrodark")
