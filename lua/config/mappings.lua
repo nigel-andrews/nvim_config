@@ -21,3 +21,9 @@ map('n', '<leader>lG', function() vim.lsp.buf.workspace_symbol() end, { desc = '
 map('n', '<leader>tt',  "<cmd>ToggleTerm<cr>", { desc = 'Open terminal' })
 map('n', '<leader>tf',  "<cmd>ToggleTerm direction=float<cr>", { desc = 'Open floatting terminal' })
 map('n', '<leader>tv',  "<cmd>ToggleTerm direction=vertical<cr>", { desc = 'Open terminal v-split' })
+
+-- Gitsigns
+map('n', '<leader>gp',  "<cmd>Gitsigns preview_hunk_inline<cr>", { desc = 'Preview changes' })
+map('n', '<leader>gs',  "<cmd>Gitsigns stage_hunk<cr>", { desc = 'Stage hunk' })
+map('n', '<leader>gr',  "<cmd>Gitsigns reset_hunk<cr>", { desc = 'Reset hunk' })
+map('n', '<leader>gu',  "<cmd>Gitsigns undo_stage_hunk<cr>", { desc = 'Undo staging' })
