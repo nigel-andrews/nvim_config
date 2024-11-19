@@ -27,3 +27,4 @@ map('n', '<leader>gp',  "<cmd>Gitsigns preview_hunk_inline<cr>", { desc = 'Previ
 map('n', '<leader>gs',  "<cmd>Gitsigns stage_hunk<cr>", { desc = 'Stage hunk' })
 map('n', '<leader>gr',  "<cmd>Gitsigns reset_hunk<cr>", { desc = 'Reset hunk' })
 map('n', '<leader>gu',  "<cmd>Gitsigns undo_stage_hunk<cr>", { desc = 'Undo staging' })
+map('n', '<leader>gb',  "<cmd>Gitsigns blame_line<cr>", { desc = 'Blame' })
