@@ -14,6 +14,10 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smarttab = true
 
+-- TODO: Change in function of filetype
+vim.opt.textwidth = 80;
+vim.opt.wrap = true;
+
 vim.opt.hlsearch = false
 vim.opt.clipboard = "unnamedplus"
 vim.opt.undofile = true
