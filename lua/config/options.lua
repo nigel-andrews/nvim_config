@@ -25,6 +25,8 @@ vim.opt.undofile = true
 vim.filetype.add({
     extension = {
         h = "cpp",
+        vert = "glsl",
+        frag = "glsl",
     },
 })
 
