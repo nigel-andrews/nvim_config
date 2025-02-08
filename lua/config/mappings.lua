@@ -17,6 +17,10 @@ map('n', '<leader>ld', function() vim.diagnostic.open_float() end, { desc = 'Hov
 map('n', '<leader>lr', function() vim.lsp.buf.rename() end, { desc = 'Rename symbol' })
 map('n', '<leader>lh', function() vim.lsp.buf.signature_help() end, { desc = 'Signature help' })
 map('n', '<leader>lG', function() vim.lsp.buf.workspace_symbol() end, { desc = 'Workspace symbol' })
+map('n', '<leader>li', function() vim.lsp.buf.implementation() end, { desc = 'Go to implementation' })
+map('n', '<leader>lt', function() vim.lsp.buf.type_definition() end, { desc = 'Go to type definition' })
+map('n', '<leader>ld', function() vim.lsp.buf.definition() end, { desc = 'Go to definition' })
+map('n', '<leader>lD', function() vim.lsp.buf.declaration() end, { desc = 'Go to declaration' })
 
 -- ToggleTerm
 map('n', '<leader>tt',  "<cmd>ToggleTerm<cr>", { desc = 'Open terminal' })

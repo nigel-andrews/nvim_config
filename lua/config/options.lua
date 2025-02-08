@@ -27,6 +27,7 @@ vim.filetype.add({
         h = "cpp",
         vert = "glsl",
         frag = "glsl",
+        comp = "glsl",
     },
 })
 
